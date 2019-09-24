@@ -1,0 +1,42 @@
+{
+	"name": "window-open",
+	"version": "1.0.0",
+	"description": "Minimal popup",
+	"keywords": [
+		"window",
+		"open",
+		"popup"
+	],
+	"author": {
+		"name": "Jonas Imping",
+		"email": "j.imping@5-anker.com"
+	},
+	"scripts": {
+		"clean": "rimraf lib",
+		"lint": "eslint src",
+		"test": "mocha --recursive --require babel-core/register",
+		"build": "npm run lint && npm test && npm run clean && babel src --out-dir lib"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git@gitlab.5-anker.com:9022/j.imping/window-open.git"
+	},
+	"files": [
+		"lib"
+	],
+	"main": "lib/index.js",
+	"devDependencies": {
+		"babel": "^6.3.26",
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.3",
+		"babel-eslint": "^10.0.1",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-es2015": "^6.9.0",
+		"eslint": "^5.7.0",
+		"eslint-config-airbnb": "^17.1.0",
+		"eslint-plugin-import": "^2.14.0",
+		"mocha": "^6.2.0",
+		"rimraf": "^3.0.0"
+	}
+}
