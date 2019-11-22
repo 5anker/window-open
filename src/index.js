@@ -20,7 +20,7 @@ function configure(options = {}) {
 	};
 }
 
-export const popup = (url, options) => {
+export const popup = (url, options = {}) => {
 	const str = stringify(configure(options));
 	const w = window.open(url, options.name || '', str);
 
@@ -33,7 +33,7 @@ export const popup = (url, options) => {
 	return false;
 };
 
-export default (url, options) => {
+export default (url, options = {}) => {
 	const str = stringify(options);
 	const w = window.open(url, options.name || '', str);
 
