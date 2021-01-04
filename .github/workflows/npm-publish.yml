@@ -29,6 +29,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+          scope: '@5anker'
       - run: npm ci
       - run: npm publish
         env:
@@ -43,6 +44,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
+          scope: '@5anker'
       - run: npm ci
       - run: npm publish
         env:
