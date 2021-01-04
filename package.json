@@ -1,5 +1,5 @@
 {
-	"name": "window-open",
+	"name": "@5anker/window-open",
 	"version": "1.0.0",
 	"description": "Minimal popup",
 	"keywords": [
@@ -17,7 +17,7 @@
 		"test": "mocha --recursive --require babel-core/register",
 		"build": "npm run lint && npm test && npm run clean && babel src --out-dir lib",
 		"prepublish": "npm run build",
-		"publish": "npm publish"
+		"publish": "npm publish --access public"
 	},
 	"license": "MIT",
 	"files": [
