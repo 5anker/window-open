@@ -31,7 +31,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
           scope: '@5anker'
       - run: npm ci
-      - run: npm publish
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
@@ -46,6 +46,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@5anker'
       - run: npm ci
-      - run: npm publish
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
